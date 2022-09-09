@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 17:35:57 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 17:33:05 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 18:27:50 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	move_enemy_frame(int frame, t_map *map, char *image)
 {
 	if (map->frames_enemies == frame)
 	{
-		put_imagen_xpm(map, "./sprites/suelo_ok.xpm", map->enemy_y, map->enemy_x);
+		put_imagen_xpm(map, "./sprites/suelo_ok.xpm",
+			map->enemy_y, map->enemy_x);
 		put_imagen_xpm(map, image, map->enemy_y, map->enemy_x);
 	}
 }

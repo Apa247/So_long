@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:16:01 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 16:18:47 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 18:54:46 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,16 +81,22 @@ int		check_map_error(t_map *map);
 t_map	ft_initmap(void);
 void	start_game(t_map *map);
 int		put_imagen_map(t_map *map);
+void	put_walls(t_map *map, int i, int k);
+void	put_other_map(t_map *map, int i, int k);
 void	get_type_params(t_map map, int i, int k);
 void	put_imagen_xpm(t_map *map, char *adress_img, int x, int y);
 t_map	*params_init(t_map *map);
 t_map	*params_init_2(t_map *map);
-//void	freemap(t_map *map);
 int		closewin(t_map *map);
-int		key_select(int keycode, t_map *map);
 int		render_next_frame(t_map *map);
-void	key_y(int keycode, t_map *map, int *i);
-void	key_x(int keycode, t_map *map, int *i);
+int		key_select(int keycode, t_map *map);
+void	key_y(int keycode, t_map *map);
+void	key_y_2(int keycode, t_map *map);
+void	key_x(int keycode, t_map *map);
+void	key_x_left(int keycode, t_map *map);
+void	key_x_left_2(t_map *map);
+void	key_x_right(int keycode, t_map *map);
+void	key_x_right_2(t_map *map);
 void	put_goku_map(t_map *map);
 void	move_goku_y(t_map *map);
 void	move_goku_x(t_map *map);
@@ -99,8 +105,6 @@ void	move_goku_x_left(t_map *map);
 void	open_exit(t_map *map);
 void	open_exit_2(t_map *map);
 void	power_ki(t_map *map);
-void	key_x_left(int keycode, t_map *map, int *i);
-void	key_x_right(int keycode, t_map *map, int *i);
 void	super_power_ki(t_map *map);
 void	move_frame(unsigned long frame, t_map *map, char *image);
 void	put_goku_map_x(t_map *map);

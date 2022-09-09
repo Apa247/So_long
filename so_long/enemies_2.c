@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 16:20:10 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 17:38:29 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 18:26:29 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	move_enemy_y_down(t_map *map)
 		put_imagen_xpm(map, "./sprites/suelo_ok.xpm",
 			map->enemy_y, map->enemy_x);
 		map->enemy_y++;
+		if (map->px == map->enemy_x && map->py == map->enemy_y)
+			closewin(map);
 		if (map->enemy_dir_x == 0)
 			move_enemy_frame(2000, map, "./sprites/bubu_right.xpm");
 		else
@@ -53,6 +55,8 @@ void	move_enemy_y_up(t_map *map)
 		put_imagen_xpm(map, "./sprites/suelo_ok.xpm",
 			map->enemy_y, map->enemy_x);
 		map->enemy_y--;
+		if (map->px == map->enemy_x && map->py == map->enemy_y)
+			closewin(map);
 		if (map->enemy_dir_x == 0)
 			move_enemy_frame(2000, map, "./sprites/bubu_right.xpm");
 		else

@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 17:35:57 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 13:59:11 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 18:25:56 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	put_goku_map_x(t_map *map)
 	if (map->keycode_c == 0 && map->n_frames == 800)
 	{
 		map->px--;
+		if (map->px == map->enemy_x && map->py == map->enemy_y)
+			closewin(map);
 		if (map->split_map[map->py][map->px] == 'C')
 			map->ki = 1;
 		map->split_map[map->py][map->px] = 'P';
@@ -43,6 +45,8 @@ void	put_goku_map_x(t_map *map)
 	if (map->keycode_c == 2 && map->n_frames == 800)
 	{
 		map->px++;
+		if (map->px == map->enemy_x && map->py == map->enemy_y)
+			closewin(map);
 		if (map->split_map[map->py][map->px] == 'C')
 			map->ki = 1;
 		map->split_map[map->py][map->px] = 'P';

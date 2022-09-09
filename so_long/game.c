@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:17:28 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 18:23:52 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 18:41:08 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,72 +65,10 @@ int	key_select(int keycode, t_map *map)
 	}
 	if (map->n_frames > 1400 && map->ki == 0)
 	{
-		key_y(keycode, map, &i);
-		key_x(keycode, map, &i);
+		key_y(keycode, map);
+		key_x(keycode, map);
 	}
 	return (i);
-}
-
-int	put_imagen_map(t_map *map)
-{
-	int	i;
-	int	k;
-
-	i = -1;
-	while (map->split_map[++i])
-	{
-		k = -1;
-		while (map->split_map[i][++k])
-		{
-			if (map->split_map[i][k] == '1')
-			{
-				if (i == 0 && k == 0)
-					put_imagen_xpm(map, "./sprites/esquina_izq_up.xpm", i, k);
-				else if (i == 0 && k > 0 && k < map->n_col - 1)
-					put_imagen_xpm(map, "./sprites/lado_up.xpm", i, k);
-				else if (i == 0 && k == map->n_col - 1)
-					put_imagen_xpm(map, "./sprites/esquina_der_up.xpm", i, k);
-				else if (k == 0 && i > 0 && i < map->n_row - 1)
-					put_imagen_xpm(map, "./sprites/lado_izq.xpm", i, k);
-				else if (i == map->n_row - 1 && k == 0)
-					put_imagen_xpm(map, "./sprites/esquina_izq_down.xpm", i, k);
-				else if (i == map->n_row - 1 && k > 0 && k < map->n_col - 1)
-					put_imagen_xpm(map, "./sprites/lado_abj.xpm", i, k);
-				else if (i == map->n_row - 1 && k == map->n_col - 1)
-					put_imagen_xpm(map, "./sprites/esquina_der_down.xpm", i, k);
-				else if (k == map->n_col - 1 && i > 0 && i < map->n_row - 1)
-					put_imagen_xpm(map, "./sprites/lado_der.xpm", i, k);
-				else
-				{
-					put_imagen_xpm(map, "./sprites/suelo_ok.xpm", i, k);
-					put_imagen_xpm(map, "./sprites/pared_ok.xpm", i, k);
-				}
-			}
-			if (map->split_map[i][k] == '0')
-				put_imagen_xpm(map, "./sprites/suelo_ok.xpm", i, k);
-			if (map->split_map[i][k] == 'T')
-			{
-				put_imagen_xpm(map, "./sprites/suelo_ok.xpm", i, k);
-				put_imagen_xpm(map, "./sprites/bubu_right.xpm", i, k);
-			}
-			if (map->split_map[i][k] == 'C')
-			{
-				put_imagen_xpm(map, "./sprites/suelo_ok.xpm", i, k);
-				put_imagen_xpm(map, "./sprites/coleccionable.xpm", i, k);
-			}
-			if (map->split_map[i][k] == 'E')
-			{
-				put_imagen_xpm(map, "./sprites/suelo_ok.xpm", i, k);
-				put_imagen_xpm(map, "./sprites/capsula.xpm", i, k);
-			}
-			if (map->split_map[i][k] == 'P')
-			{
-				put_imagen_xpm(map, "./sprites/suelo_ok.xpm", i, k);
-				put_imagen_xpm(map, "./sprites/goku_buena.xpm", i, k);
-			}
-		}
-	}
-	return (1);
 }
 
 void	put_imagen_xpm(t_map *map, char *adress_img, int x, int y)
