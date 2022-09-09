@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 14:31:21 by daparici          #+#    #+#             */
-/*   Updated: 2022/07/29 16:42:41 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 18:58:33 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,9 @@ void	ft_count_params(t_map *map, int i, int k)
 		map->n_collect += 1;
 	if (map->split_map[i][k] == 'P')
 	{
-		printf("%d\n%d\n", i, k);
 		map->n_pl += 1;
 		map->py = i;
 		map->px = k;
-		printf("%i\n%i\n", map->px, map->py);
 	}
 }
 

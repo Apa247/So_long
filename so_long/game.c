@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:17:28 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 18:41:08 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 18:57:30 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ int	key_select(int keycode, t_map *map)
 	int	i;
 
 	i = 0;
-	printf("%i\n", keycode);
 	if (keycode == 53)
 	{
 		printf("finished!\n");

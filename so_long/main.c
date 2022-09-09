@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 17:27:41 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 14:27:21 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 18:58:08 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int	main(int argc, char **argv)
 	check_map(argc, argv, map);
 	map->copy_n_enemies = map->n_enemies;
 	start_game(map);
-	printf("%s\n", "OK");
 	return (0);
 }
 
