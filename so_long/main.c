@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 17:27:41 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 18:58:08 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 19:07:03 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,6 @@ t_map	*params_init_2(t_map *map)
 	map->n_moves = 0;
 	map->width = 0;
 	map->height = 0;
+	map->score = 0;
 	return (map);
 }
