@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:16:01 by daparici          #+#    #+#             */
-/*   Updated: 2022/08/14 20:29:17 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 16:18:47 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,5 +115,10 @@ void	move_enemies_2(t_map *map, int i, int k);
 void	move_enemy_y(t_map *map);
 void	move_enemy_x(t_map *map);
 void	move_enemy_frame(int frame, t_map *map, char *image);
-
+int		move_enemies_identify(t_map *map, int i, int k);
+void	move_enemies_params(t_map *map);
+void	move_enemy_y_down(t_map *map);
+void	move_enemy_y_up(t_map *map);
+void	move_enemy_x_right(t_map *map);
+void	move_enemy_x_left(t_map *map);
 #endif

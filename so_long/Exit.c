@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:17:28 by daparici          #+#    #+#             */
-/*   Updated: 2022/08/04 12:17:33 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 16:23:16 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,5 @@ void	open_exit_2(t_map *map)
 			map->frame_exit = 99;
 		if (map->n_exit == 0)
 			map->frame_exit = 5601;
-		// {
-		// 	map->exit_open = 1;
-		// }
 	}
 }

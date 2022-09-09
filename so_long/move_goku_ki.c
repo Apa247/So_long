@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 17:34:31 by daparici          #+#    #+#             */
-/*   Updated: 2022/07/27 18:49:15 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 17:34:36 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	move_frame(unsigned long frame, t_map *map, char *image)
 {
 	if (map->n_frames == frame)
 	{
-		put_imagen_xpm(map, "./sprites/suelo.xpm", map->py, map->px);
+		put_imagen_xpm(map, "./sprites/suelo_ok.xpm", map->py, map->px);
 		put_imagen_xpm(map, image, map->py, map->px);
 		if (map->n_frames == 5400 && map->n_collect != 0)
 			map->ki = 0;

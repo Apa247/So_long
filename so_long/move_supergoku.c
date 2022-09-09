@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 17:35:57 by daparici          #+#    #+#             */
-/*   Updated: 2022/08/14 19:20:44 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 17:35:33 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	move_supergoku_y(t_map *map)
 {
 	if (map->n_frames == 0)
 	{
-		put_imagen_xpm(map, "./sprites/suelo.xpm", map->py, map->px);
+		put_imagen_xpm(map, "./sprites/suelo_ok.xpm", map->py, map->px);
 		if (map->pl_dir == 0)
 			put_imagen_xpm(map, "./sprites/supergoku_move_y.xpm",
 				map->py, map->px);
@@ -26,7 +26,7 @@ void	move_supergoku_y(t_map *map)
 	}
 	if (map->n_frames == 400)
 	{
-		put_imagen_xpm(map, "./sprites/suelo.xpm", map->py, map->px);
+		put_imagen_xpm(map, "./sprites/suelo_ok.xpm", map->py, map->px);
 		if (map->pl_dir == 0)
 			put_imagen_xpm(map, "./sprites/supergoku_move_y2.xpm",
 				map->py, map->px);
@@ -37,7 +37,7 @@ void	move_supergoku_y(t_map *map)
 	move_frame(800, map, "./sprites/goku_move_y_bueno.xpm");
 	if (map->n_frames == 1200)
 	{
-		put_imagen_xpm(map, "./sprites/suelo.xpm", map->py, map->px);
+		put_imagen_xpm(map, "./sprites/suelo_ok.xpm", map->py, map->px);
 		map->split_map[map->py][map->px] = '0';
 		put_goku_map(map);
 	}
@@ -75,7 +75,7 @@ void	move_supergoku_x_left(t_map *map)
 		move_frame(100, map, "./sprites/supergoku_move_x_left.xpm");
 	if (map->n_frames == 800)
 	{
-		put_imagen_xpm(map, "./sprites/suelo.xpm", map->py, map->px);
+		put_imagen_xpm(map, "./sprites/suelo_ok.xpm", map->py, map->px);
 		map->split_map[map->py][map->px] = '0';
 		put_goku_map(map);
 	}
@@ -89,7 +89,7 @@ void	move_supergoku_x_right(t_map *map)
 		move_frame(100, map, "./sprites/supergoku_move_x.xpm");
 	if (map->n_frames == 800)
 	{
-		put_imagen_xpm(map, "./sprites/suelo.xpm", map->py, map->px);
+		put_imagen_xpm(map, "./sprites/suelo_ok.xpm", map->py, map->px);
 		map->split_map[map->py][map->px] = '0';
 		put_goku_map(map);
 	}

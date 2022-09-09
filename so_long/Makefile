@@ -6,7 +6,7 @@
 #    By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/23 12:38:29 by daparici          #+#    #+#              #
-#    Updated: 2022/07/27 17:38:13 by daparici         ###   ########.fr        #
+#    Updated: 2022/09/09 16:21:14 by daparici         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Werror -Wextra -g -fsanitize=address -g3
 AR = ar rcs
 
 SRCS = main.c check_map_1.c check_map_2.c game.c Exit.c move_goku_ki.c move_goku.c key_select.c \
-	move_supergoku.c move_goku_2.c enemies.c
+	move_supergoku.c move_goku_2.c enemies.c enemies_2.c
 GNL = get_next_line.c get_next_line_utils.c
 GNLPATH = $(addprefix ./GetNextLine/,$(GNL))
 LIBFT = ./Libft/libft.a
