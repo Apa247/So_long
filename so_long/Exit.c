@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:17:28 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 16:23:16 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 18:20:26 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	open_exit_2(t_map *map)
 	}
 	if (map->frame_exit == 2400 && map->n_exit != 0)
 	{
+		put_imagen_xpm(map, "./sprites/suelo_ok.xpm", map->e_y, map->e_x);
 		put_imagen_xpm(map, "./sprites/salida.xpm", map->e_y, map->e_x);
 		map->split_map[map->e_y][map->e_x] = 'O';
 		map->n_exit -= 1;

@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:17:28 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 18:09:43 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/09 18:23:52 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int	render_next_frame(t_map *map)
 	map->frame_exit++;
 	map->n_frames++;
 	map->frames_enemies++;
-	if (map->copy_px == map->copy_enemy_x
-		&& map->copy_py == map->copy_enemy_y)
+	if (map->px == map->enemy_x
+		&& map->py == map->enemy_y)
 		closewin(map);
 	return (1);
 }
@@ -119,7 +119,10 @@ int	put_imagen_map(t_map *map)
 				put_imagen_xpm(map, "./sprites/coleccionable.xpm", i, k);
 			}
 			if (map->split_map[i][k] == 'E')
+			{
+				put_imagen_xpm(map, "./sprites/suelo_ok.xpm", i, k);
 				put_imagen_xpm(map, "./sprites/capsula.xpm", i, k);
+			}
 			if (map->split_map[i][k] == 'P')
 			{
 				put_imagen_xpm(map, "./sprites/suelo_ok.xpm", i, k);
