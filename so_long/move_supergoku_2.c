@@ -45,6 +45,9 @@ void	put_supergoku_map_x(t_map *map)
 	if (map->keycode_c == 0 && map->n_frames == 800)
 	{
 		map->px--;
+		if (map->split_map[map->py][map->px] == 'T'
+			|| map->split_map[map->py][map->px] == 't')
+			closewin(map);
 		put_imagen_xpm(map, "./sprites/supergoku_move_x2_left.xpm",
 			map->py, map->px);
 	}
@@ -63,6 +66,9 @@ void	put_supergoku_map_x2(t_map *map)
 	if (map->keycode_c == 2 && map->n_frames == 800)
 	{
 		map->px++;
+		if (map->split_map[map->py][map->px] == 'T'
+			|| map->split_map[map->py][map->px] == 't')
+			closewin(map);
 		put_imagen_xpm(map, "./sprites/supergoku_move_x2.xpm",
 			map->py, map->px);
 	}

@@ -27,6 +27,7 @@
 # include "./mlx/mlx.h"
 # include "./Libft/libft.h"
 # include "./GetNextLine/get_next_line.h"
+# include "./printf/ft_printf.h"
 # include <OpenGL/gl.h>
 # include <OpenGl/glu.h>
 # include <GLUT/glut.h>

@@ -62,7 +62,7 @@ int	key_select(int keycode, t_map *map)
 	i = 0;
 	if (keycode == 53)
 	{
-		printf("finished!\n");
+		ft_printf("finished!\n");
 		exit(0);
 		return (1);
 	}
@@ -94,10 +94,9 @@ void	put_imagen_xpm(t_map *map, char *adress_img, int x, int y)
 			&res, &res);
 	if (!img)
 	{
-		printf("ERROR\n");
+		ft_printf("ERROR\n");
 		exit(1);
 	}
 	mlx_put_image_to_window(map->mlx, map->mlx_window, img,
 		map->width, map->height);
-	//	mlx_destroy_image(map->mlx, img);
 }

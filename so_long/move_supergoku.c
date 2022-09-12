@@ -53,6 +53,9 @@ void	put_supergoku_map_y(t_map *map)
 	if (map->keycode_c == 13)
 	{
 		map->py--;
+		if (map->split_map[map->py][map->px] == 'T'
+			|| map->split_map[map->py][map->px] == 't')
+			closewin(map);
 		if (map->split_map[map->py][map->px] == 'C')
 			map->ki = 1;
 		map->split_map[map->py][map->px] = 'P';
@@ -64,6 +67,9 @@ void	put_supergoku_map_y(t_map *map)
 	if (map->keycode_c == 1)
 	{
 		map->py++;
+		if (map->split_map[map->py][map->px] == 'T'
+			|| map->split_map[map->py][map->px] == 't')
+			closewin(map);
 		if (map->split_map[map->py][map->px] == 'C')
 			map->ki = 1;
 		map->split_map[map->py][map->px] = 'P';

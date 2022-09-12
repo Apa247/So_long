@@ -23,8 +23,12 @@ void	key_y(int keycode, t_map *map)
 	if (keycode == 13 && map->split_map[map->py - 1][map->px] != '1' &&
 		map->split_map[map->py -1][map->px] != 'E')
 	{
-		if (map->split_map[map->py - 1][map->px] == 'O' ||
-			map->split_map[map->py - 1][map->px] == 'T' ||
+		if (map->split_map[map->py - 1][map->px] == 'O')
+		{
+			map->exit_open = 0;
+			closewin(map);
+		}
+		if (map->split_map[map->py - 1][map->px] == 'T' ||
 			map->split_map[map->py - 1][map->px] == 't')
 			closewin(map);
 		if (map->split_map[map->py -1][map->px] == 'C')
@@ -44,8 +48,12 @@ void	key_y(int keycode, t_map *map)
 
 void	key_y_2(int keycode, t_map *map)
 {
-	if (map->split_map[map->py + 1][map->px] == 'O' ||
-		map->split_map[map->py + 1][map->px] == 'T' ||
+	if (map->split_map[map->py + 1][map->px] == 'O')
+	{
+		map->exit_open = 0;
+		closewin(map);
+	}
+	if (map->split_map[map->py + 1][map->px] == 'T' ||
 		map->split_map[map->py + 1][map->px] == 't')
 		closewin(map);
 	if (map->split_map[map->py + 1][map->px] == 'C')
@@ -61,5 +69,5 @@ void	key_y_2(int keycode, t_map *map)
 
 void	print_moves(int moves)
 {
-	printf("Numero de movimientos: %i\n", moves);
+	ft_printf("Numero de movimientos: %i\n", moves);
 }

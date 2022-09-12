@@ -17,8 +17,12 @@ void	key_x_right(int keycode, t_map *map)
 	if (keycode == 2 && map->split_map[map->py][map->px + 1] != '1' &&
 		map->split_map[map->py][map->px + 1] != 'E')
 	{
-		if (map->split_map[map->py][map->px + 1] == 'O' ||
-			map->split_map[map->py][map->px + 1] == 'T' ||
+		if (map->split_map[map->py][map->px + 1] == 'O')
+		{
+			map->exit_open = 0;
+			closewin(map);
+		} 
+		if (map->split_map[map->py][map->px + 1] == 'T' ||
 			map->split_map[map->py][map->px + 1] == 't')
 			closewin(map);
 		if (map->pl_dir == 1)
@@ -58,8 +62,12 @@ void	key_x_left(int keycode, t_map *map)
 	if (keycode == 0 && map->split_map[map->py][map->px - 1] != '1' &&
 		map->split_map[map->py][map->px - 1] != 'E')
 	{
-		if (map->split_map[map->py][map->px - 1] == 'O' ||
-			map->split_map[map->py][map->px - 1] == 'T' ||
+		if (map->split_map[map->py][map->px - 1] == 'O')
+		{
+			map->exit_open = 0;
+			closewin(map);
+		}
+		if (map->split_map[map->py][map->px - 1] == 'T' ||
 			map->split_map[map->py][map->px - 1] == 't')
 			closewin(map);
 		if (map->pl_dir == 0)

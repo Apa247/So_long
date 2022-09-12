@@ -33,7 +33,8 @@ void	put_goku_map_x(t_map *map)
 	if (map->keycode_c == 0 && map->n_frames == 800)
 	{
 		map->px--;
-		if (map->px == map->enemy_x && map->py == map->enemy_y)
+		if (map->split_map[map->py][map->px] == 'T'
+			|| map->split_map[map->py][map->px] == 't')
 			closewin(map);
 		if (map->split_map[map->py][map->px] == 'C')
 			map->ki = 1;
@@ -45,7 +46,8 @@ void	put_goku_map_x(t_map *map)
 	if (map->keycode_c == 2 && map->n_frames == 800)
 	{
 		map->px++;
-		if (map->px == map->enemy_x && map->py == map->enemy_y)
+		if (map->split_map[map->py][map->px] == 'T'
+			|| map->split_map[map->py][map->px] == 't')
 			closewin(map);
 		if (map->split_map[map->py][map->px] == 'C')
 			map->ki = 1;
@@ -61,6 +63,9 @@ void	put_goku_map_y(t_map *map)
 	if (map->keycode_c == 13)
 	{
 		map->py--;
+		if (map->split_map[map->py][map->px] == 'T'
+			|| map->split_map[map->py][map->px] == 't')
+			closewin(map);
 		if (map->split_map[map->py][map->px] == 'C')
 			map->ki = 1;
 		map->split_map[map->py][map->px] = 'P';
@@ -72,6 +77,9 @@ void	put_goku_map_y(t_map *map)
 	if (map->keycode_c == 1)
 	{
 		map->py++;
+		if (map->split_map[map->py][map->px] == 'T'
+			|| map->split_map[map->py][map->px] == 't')
+			closewin(map);
 		if (map->split_map[map->py][map->px] == 'C')
 			map->ki = 1;
 		map->split_map[map->py][map->px] = 'P';

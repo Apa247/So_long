@@ -14,20 +14,20 @@
 
 int	error_msg(char *msg)
 {
-	printf("Error\n%s\n", msg);
+	ft_printf("Error\n%s\n", msg);
 	exit(0);
 	return (0);
 }
 
 int	closewin(t_map *map)
 {
-	if (map->n_exit == 0 && map->px != map->enemy_x && map->py != map->enemy_y)
+	if (map->n_exit == 0 && map->exit_open == 0)
 	{
-		printf("You win\n");
+		ft_printf("You win\n");
 		exit (0);
 		return (0);
 	}
-	printf("Game over\n");
+	ft_printf("Game over\n");
 	exit (0);
 	if (map)
 		return (0);
