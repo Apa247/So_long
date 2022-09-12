@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 18:51:38 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 19:08:32 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/12 11:08:17 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	key_x_right(int keycode, t_map *map)
 		}
 		map->n_frames = 0;
 		map->keycode_c = keycode;
+		map->score++;
+		print_score(map->score);
 	}
 }
 
@@ -69,6 +71,8 @@ void	key_x_left(int keycode, t_map *map)
 		}
 		map->n_frames = 0;
 		map->keycode_c = keycode;
+		map->score++;
+		print_score(map->score);
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 17:37:52 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 19:23:23 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/12 11:08:07 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void	key_y(int keycode, t_map *map)
 		map->keycode_c = keycode;
 		map->score++;
 		print_score(map->score);
-		
 	}
 	if (keycode == 1 && map->split_map[map->py + 1][map->px] != '1' &&
 		map->split_map[map->py + 1][map->px] != 'E')
@@ -56,12 +55,11 @@ void	key_y_2(int keycode, t_map *map)
 	}
 	map->n_frames = 0;
 	map->keycode_c = keycode;
+	map->score++;
+	print_score(map->score);
 }
 
 void	print_score(int score)
 {
-	if (score > 9)
-		print_score(score / 10);
-	write(1, &"0123456789"[score % 10], 1);
-	write(1, &"\n", 1);
+	printf("Numero de movimientos: %i\n", score);
 }

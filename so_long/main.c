@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 17:27:41 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 19:07:03 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/12 12:00:57 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,22 @@ int	closewin(t_map *map)
 		exit (0);
 		return (0);
 	}
-	printf("Finished\n");
+	printf("Game over\n");
 	exit (0);
 	if (map)
 		return (0);
+}
+
+static void	leaks(void)
+{
+	system("leaks -q so_long");
 }
 
 int	main(int argc, char **argv)
 {
 	t_map	*map;
 
+	atexit(leaks);
 	map = (t_map *)ft_calloc(sizeof(t_map), 1);
 	map = params_init(map);
 	map = params_init_2(map);
