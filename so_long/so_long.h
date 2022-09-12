@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:16:01 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/12 12:33:02 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/12 13:38:50 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,10 +111,12 @@ void	move_frame(unsigned long frame, t_map *map, char *image);
 void	put_goku_map_x(t_map *map);
 void	put_goku_map_y(t_map *map);
 void	move_supergoku_y(t_map *map);
+void	move_supegoku_y2(t_map *map);
 void	put_supergoku_map_y(t_map *map);
 void	move_supergoku_x_left(t_map *map);
 void	move_supergoku_x_right(t_map *map);
 void	put_supergoku_map_x(t_map *map);
+void	put_supergoku_map_x2(t_map *map);
 void	move_enemies(t_map *map);
 void	move_enemies_2(t_map *map, int i, int k);
 void	move_enemy_y(t_map *map);
