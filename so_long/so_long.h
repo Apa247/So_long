@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:16:01 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/12 13:38:50 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/12 13:44:18 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ void	key_x_right(int keycode, t_map *map);
 void	key_x_right_2(t_map *map);
 void	put_goku_map(t_map *map);
 void	move_goku_y(t_map *map);
+void	move_goku_y2(t_map *map);
 void	move_goku_x(t_map *map);
 void	move_goku_x_right(t_map *map);
 void	move_goku_x_left(t_map *map);

@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 17:35:57 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/09 17:33:56 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/12 13:45:05 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,11 @@ void	move_goku_y(t_map *map)
 			put_imagen_xpm(map, "./sprites/goku_move_y_left.xpm",
 				map->py, map->px);
 	}
+	move_goku_y2(map);
+}
+
+void	move_goku_y2(t_map *map)
+{
 	if (map->n_frames == 400)
 	{
 		put_imagen_xpm(map, "./sprites/suelo_ok.xpm", map->py, map->px);
