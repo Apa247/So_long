@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:16:01 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/12 10:07:55 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/12 12:33:02 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ typedef struct s_map
 	unsigned long	n_frames;
 	int				width;
 	int				height;
-	int				score;
+	int				moves;
 }				t_map;
 
 int		error_msg(char *msg);
@@ -126,5 +126,5 @@ void	move_enemy_y_down(t_map *map);
 void	move_enemy_y_up(t_map *map);
 void	move_enemy_x_right(t_map *map);
 void	move_enemy_x_left(t_map *map);
-void	print_score(int score);
+void	print_moves(int moves);
 #endif

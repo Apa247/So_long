@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:17:28 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/12 11:49:59 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/12 12:32:50 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	start_game(t_map *map)
 int	key_select(int keycode, t_map *map)
 {
 	int		i;
-	char	*score;
+	char	*moves;
 
 	i = 0;
 	if (keycode == 53)
@@ -75,10 +75,10 @@ int	key_select(int keycode, t_map *map)
 			key_x(keycode, map);
 		}
 	}
-	score = ft_itoa(map->score);
+	moves = ft_itoa(map->moves);
 	put_imagen_xpm(map, "./sprites/lado_up.xpm", 0, 1);
 	put_imagen_xpm(map, "./sprites/lado_up.xpm", 0, 2);
-	mlx_string_put(map->mlx, map->mlx_window, 50, 24, 0, score);
+	mlx_string_put(map->mlx, map->mlx_window, 50, 24, 0, moves);
 	return (i);
 }
 

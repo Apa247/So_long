@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 17:27:41 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/12 12:09:32 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/12 12:37:09 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	error_msg(char *msg)
 
 int	closewin(t_map *map)
 {
-	if (map->n_exit == 0)
+	if (map->n_exit == 0 && map->px != map->enemy_x && map->py != map->enemy_y)
 	{
 		printf("You win\n");
 		exit (0);
@@ -84,6 +84,6 @@ t_map	*params_init_2(t_map *map)
 	map->n_moves = 0;
 	map->width = 0;
 	map->height = 0;
-	map->score = 0;
+	map->moves = 0;
 	return (map);
 }
