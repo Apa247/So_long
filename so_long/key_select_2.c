@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 18:51:38 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/12 12:31:58 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/13 14:46:12 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	key_x_right(int keycode, t_map *map)
 		{
 			map->exit_open = 0;
 			closewin(map);
-		} 
+		}
 		if (map->split_map[map->py][map->px + 1] == 'T' ||
 			map->split_map[map->py][map->px + 1] == 't')
 			closewin(map);

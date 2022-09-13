@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 15:52:28 by daparici          #+#    #+#             */
-/*   Updated: 2022/04/21 20:34:59 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/13 14:34:00 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdio.h>
 # include <unistd.h>
 
-int	ft_printf(const char *str, ...);
+int		ft_printf(const char *str, ...);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 void	ft_printhex(unsigned long long c, char *base, int *len);
 void	ft_printadress(unsigned long long c, int *len, char pos);

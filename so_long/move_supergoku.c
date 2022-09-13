@@ -6,7 +6,7 @@
 /*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 17:35:57 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/12 13:39:31 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/13 14:42:41 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,11 @@ void	put_supergoku_map_y(t_map *map)
 		else
 			move_frame(1200, map, "./sprites/supergoku_left.xpm");
 	}
+	put_supergoku_map_y2(map);
+}
+
+void	put_supergoku_map_y2(t_map *map)
+{
 	if (map->keycode_c == 1)
 	{
 		map->py++;
