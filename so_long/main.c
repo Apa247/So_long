@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daparici <daparici@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 17:27:41 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/12 12:37:09 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/20 12:48:29 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+static void leaks (void)
+{
+	system("leaks So_long");
+}
 
 int	error_msg(char *msg)
 {
@@ -37,6 +42,7 @@ int	main(int argc, char **argv)
 {
 	t_map	*map;
 
+	atexit(leaks);
 	map = (t_map *)ft_calloc(sizeof(t_map), 1);
 	map = params_init(map);
 	map = params_init_2(map);

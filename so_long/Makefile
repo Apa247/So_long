@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+         #
+#    By: daparici <daparici@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/23 12:38:29 by daparici          #+#    #+#              #
-#    Updated: 2022/09/13 13:21:46 by daparici         ###   ########.fr        #
+#    Updated: 2022/09/20 12:28:09 by daparici         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = So_long
 CC = gcc 
-CFLAGS = -Wall -Werror -Wextra -g -fsanitize=address -g3
+CFLAGS = -Wall -Werror -Wextra #-g -fsanitize=address -g3
 AR = ar rcs
 
 SRCS = main.c check_map_1.c check_map_2.c game.c Exit.c move_goku_ki.c move_goku.c key_select.c \

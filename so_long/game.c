@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daparici <daparici@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: daparici <daparici@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 16:17:28 by daparici          #+#    #+#             */
-/*   Updated: 2022/09/13 14:37:40 by daparici         ###   ########.fr       */
+/*   Updated: 2022/09/20 13:27:25 by daparici         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ int	render_next_frame(t_map *map)
 void	start_game(t_map *map)
 {
 	map->mlx = mlx_init();
-	map->mlx_window = mlx_new_window(map->mlx, map->n_col * SIZE, \
-		map->n_row * SIZE, "So_long");
+	map->mlx_window = mlx_new_window(map->mlx, (map->n_col * SIZE) + 2, \
+		(map->n_row * SIZE) + 2, "So_long");
 	put_imagen_map(map);
 	mlx_hook(map->mlx_window, 17, 1L << 17, closewin, map);
 	mlx_key_hook(map->mlx_window, key_select, map);
@@ -79,6 +79,7 @@ int	key_select(int keycode, t_map *map)
 	put_imagen_xpm(map, "./sprites/lado_up.xpm", 0, 1);
 	put_imagen_xpm(map, "./sprites/lado_up.xpm", 0, 2);
 	mlx_string_put(map->mlx, map->mlx_window, 50, 24, 0, moves);
+	free(moves);
 	return (i);
 }
 
@@ -99,4 +100,5 @@ void	put_imagen_xpm(t_map *map, char *adress_img, int x, int y)
 	}
 	mlx_put_image_to_window(map->mlx, map->mlx_window, img,
 		map->width, map->height);
+	//mlx_destroy_image(map->mlx, img);
 }
